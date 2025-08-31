@@ -1,0 +1,84 @@
+<!-- displaydata22.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Submitted Data</title>
+  <style>
+    body {
+      background-color: #036b83;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 40px;
+    }
+    h2 {
+      text-align: center;
+    }
+    form {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      width: 200px;
+    }
+    input[type="submit"] {
+      padding: 8px;
+    }
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: white;
+      color: black;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    th {
+      background-color: #005f73;
+      color: white;
+    }
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2>Submitted Data</h2>
+
+  <form method="GET" action="{{ url_for('displaydata22') }}">
+    <input type="text" name="name" placeholder="Search by name" value="{{ search_name }}">
+    <input type="submit" value="Search">
+  </form>
+
+  {% if entries %}
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Date</th>
+      <th>Value</th>
+    </tr>
+    {% for entry in entries %}
+    <tr>
+      <td>{{ entry['Name'] }}</td>
+      <td>{{ entry['Phone'] }}</td>
+      <td>{{ entry['Date'] }}</td>
+      <td>{{ entry['Value'] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p style="text-align: center;">No data found.</p>
+  {% endif %}
+
+  <a href="{{ url_for('storagepage22') }}">← Back to Form</a>
+</body>
+</html>

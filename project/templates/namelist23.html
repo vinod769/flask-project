@@ -1,0 +1,50 @@
+<!-- namelist23.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Name List</title>
+  <style>
+    body {
+      background-color: #036b83;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 40px;
+    }
+    h2 {
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    li {
+      background-color: white;
+      color: black;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      color: #036b83;
+      display: block;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2>All Users</h2>
+  <ul>
+    {% for name in names %}
+      <li><a href="{{ url_for('user_details23', name=name) }}">{{ loop.index }}. {{ name }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

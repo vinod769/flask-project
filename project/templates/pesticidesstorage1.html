@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pesticides Storage Form</title>
+  <style>
+    body {
+      background-color: #036b83;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 40px;
+    }
+    h2 {
+      text-align: center;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    input[type="text"], input[type="date"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+      background: white;
+      color: black;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #444;
+    }
+    .display-button {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      background-color: green;
+      color: white;
+      padding: 12px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Enter Pesticides Purchase Details</h2>
+  <div class="container">
+    <form method="POST">
+      Name: <input type="text" name="name" required><br>
+      pesticides Name: <input type="text" name="pesticides_name" required><br>
+      Date: <input type="date" name="date" required><br>
+      Shop Name: <input type="text" name="shop" required><br>
+      Quantity: <input type="number" name="quantity" required><br>
+      Cost: <input type="number" name="cost" required><br>
+      Phone: <input type="text" name="phone" required><br>
+      <input type="submit" value="Submit">
+    </form>
+    <a href="/pesticidesdisplay1" class="display-button">DISPLAY</a>
+  </div>
+</body>
+</html>

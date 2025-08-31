@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fertilizers Name List</title>
+  <style>
+    body {
+      background-color: #036b83;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 40px;
+    }
+    h2 {
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      max-width: 400px;
+      margin: auto;
+    }
+    li {
+      background-color: white;
+      color: black;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+    }
+    a {
+      color: #036b83;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2>All Fertilizer Names</h2>
+  <ul>
+    {% for fertilizer_name in names %}
+      <li>
+        <a href="{{ url_for('fertilizers_user_details', fertilizer_name=fertilizer_name) }}">
+          {{ loop.index }}. {{ fertilizer_name }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>crop Main Page</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 420px);
+      gap: 20px;
+    }
+
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <a href="/godanstorage1" class="card-link">
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.cEzAvosSOu6j3qbPyCEElQHaEe" alt="STORAGE" />
+        <h3>STORAGE</h3>
+      </div>
+    </a>
+
+    <a href="/godannamelist1" class="card-link">
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.NghWAhIIqiZhQ9bQhiiNCwAAAA" alt="DISPLAY" />
+        <h3>DISPLAY</h3>
+      </div>
+    </a>
+  </div>
+</body>
+</html>

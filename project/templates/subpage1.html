@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tractor sub 1</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 420px);
+      gap: 20px;
+    }
+
+    a.card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <!-- Card 1 -->
+    <a href="/subpage11" class="card-link">
+      <div class="card">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2021/7/SK/BR/WA/21474828/5-arm-plough-500x500.jpg" alt="madakalu" />
+        <h3>Madakalu</h3>
+      </div>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="/subpage12" class="card-link">
+      <div class="card">
+        <img src="https://www.fieldking.com/images/tillage/cultivator-and-tiller/lg/beri-type-spring-loaded-tiller.png" alt="Tilar" />
+        <h3>Tilar</h3>
+      </div>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="/subpage13" class="card-link">
+      <div class="card">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2020/10/HI/PT/JG/99727078/tractor-blade-harrow-500x500.jpg" alt="Guntuka" />
+        <h3>Guntuka</h3>
+      </div>
+    </a>
+
+    <!-- Card 4 -->
+    <a href="/subpage14" class="card-link">
+      <div class="card">
+        <img src="https://www.tractorjunction.com/blog/wp-content/uploads/2020/03/Roto-Seed-Drill.jpg" alt="Gorra" />
+        <h3>Gorra</h3>
+      </div>
+      <!-- Card 5 -->
+    </a>
+    <a href="/subpage15" class="card-link">
+      <div class="card">
+        <img src="https://cpimg.tistatic.com/06672596/b/4/Tractor-Trolley.png" alt="Traly" />
+        <h3>Traly</h3>
+      </div>
+    </a>
+  </div>
+</body>
+</html>

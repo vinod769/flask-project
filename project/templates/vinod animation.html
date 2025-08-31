@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Animation</title>
+  <style>
+    body {
+      background-color: #1f1c2c;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: monospace;
+      font-size: 2rem;
+    }
+
+    #type-text::after {
+      content: '|';
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="type-text"></div>
+
+  <script>
+    const text = "Welcome to My Page";
+    const speed = 100; // milliseconds
+    let index = 0;
+
+    function type() {
+      if (index < text.length) {
+        document.getElementById("type-text").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, speed);
+      }
+    }
+
+    type();
+  </script>
+</body>
+</html>

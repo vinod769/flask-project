@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>crop Names List</title>
+  <style>
+    body {
+      background-color: #036b83;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 40px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    li {
+      background-color: white;
+      color: black;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    a {
+      color: #036b83;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align: center;">Panta Perlu </h2>
+  <ul>
+    {% for panta_peru in names %}
+      <li>
+        <a href="{{ url_for('godan_user_details', panta_peru=panta_peru) }}">
+          {{ loop.index }}. {{ panta_peru }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

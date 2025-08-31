@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gorra Sub Page</title>
+  <style>
+    body {
+      background-color: #036b83;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      background: white;
+      color: #000;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #444;
+    }
+
+    .display-button {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: green;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .display-button:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+  <h2>Enter Information</h2>
+  <div class="container">
+    <form method="POST">
+      Name: <input type="text" name="name" required><br>
+      Phone: <input type="text" name="phone" required><br>
+      Date: <input type="date" name="date" required><br>
+      Value: <input type="number" name="value" required><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <a href="{{ url_for('displaydata24') }}" class="display-button">DISPLAY</a>
+  </div>
+</body>
+</html>

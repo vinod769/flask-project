@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>crop Display</title>
+  <style>
+    body {
+      background-color: #036b83;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 40px;
+    }
+
+    table {
+      width: 100%;
+      background-color: white;
+      color: black;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #005f73;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align: center;">crop Records</h2>
+  {% if entries %}
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Panta Peru</th>
+        <th>Date</th>
+        <th>Shop</th>
+        <th>Quantity</th>
+        <th>Cost</th>
+        <th>Phone</th>
+      </tr>
+      {% for entry in entries %}
+      <tr>
+        <td>{{ entry['Name'] }}</td>
+        <td>{{ entry['Panta Peru'] }}</td>
+        <td>{{ entry['Date'] }}</td>
+        <td>{{ entry['Shop'] }}</td>
+        <td>{{ entry['Quantity'] }}</td>
+        <td>{{ entry['Cost'] }}</td>
+        <td>{{ entry['Phone'] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p style="text-align: center;">No records found.</p>
+  {% endif %}
+</body>
+</html>
